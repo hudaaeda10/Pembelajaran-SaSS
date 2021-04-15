@@ -1,0 +1,16 @@
+// * Modules Container
+@use "mixin";
+.container {
+  @include mixin.flex-box(row, space-between);
+  width: 600px;
+  height: 600px;
+  background-color: aliceblue;
+
+  .box {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background-color: yellow;
+  }
+}

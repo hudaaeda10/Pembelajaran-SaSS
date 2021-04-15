@@ -1,0 +1,59 @@
+// * Mixin - Seperti Function
+//? Membuat mixin yang menyimpan berbagai style untuk beberapa element
+// ? 2 hal yang perlu diketahui - @mixin untuk medeklarasikan functionnya dan @include yang memanggil function tersebut
+
+@mixin inline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+
+.header ul {
+  @include inline-list();
+  li {
+    background-color: black;
+    padding: 1em;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+.footer ul {
+  @include inline-list();
+  li {
+    background-color: salmon;
+    padding: 0.4em;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+// * mixin arguments -dengan dua arguments
+
+@mixin flex-box($direction: row, $space: center) {
+  display: flex;
+  justify-content: $space;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.container {
+  @include flex-box(row, space-between);
+  width: 600px;
+  height: 600px;
+  background-color: aliceblue;
+
+  .box {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background-color: yellow;
+  }
+}

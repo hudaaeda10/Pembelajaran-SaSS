@@ -1,0 +1,60 @@
+// * Variabel CSS
+// ? Membuat variabel di css - dapat digunakan di seluruh elemnt html
+
+// :root {
+//   --primary-color: #f4f4f4;
+//   --secondary-color: #f2cc8f;
+//   --text-color: red;
+// }
+
+// body {
+//   background-color: var(--primary-color);
+// }
+
+// h1 {
+//   color: var(--text-color);
+// }
+
+// p {
+//   color: var(--text-color);
+// }
+
+// * Variabel pada SaSS
+// ? membuat variabel pada sass
+// ! Perilaku yang ada pada variabel sass 1. variabel sass dengan tanda "-" dan "_" terhitung sama. 2. Variabel sass memiliki scope, jika tidak di dalam netting atau {} maka bersifat global dan jika di dalam salah satu {} / neting maka hanya bisa di akses oleh selector tersebut dan turunannya. 3. Jika nama variabelnya sama tapi beda scope maka akan diitung berbeda, sedangkan jika scopenya sama maka akan ditimpa dengan nama variabel terakhir
+
+// $primary-color: #8caaba;
+// $secondary-color: #b6a363;
+// $text-color: #245d7c;
+
+// body {
+//   $color-body: red; //TODO: Hanya bisa di akses oleh selector yang berada di dalam body
+
+//   background-color: $primary-color;
+
+//   p {
+//     color: $color-body;
+//   }
+// }
+
+// h1 {
+//   color: $text-color;
+// }
+
+// * Map
+// ? Variabel SaSS juga dapat menyimpan banyak value dari 1 variabel saja
+
+// $alert: (
+//   "danger": red,
+//   "warning": yellow,
+//   "info": green,
+// );
+
+// //? penggunaanya
+// body {
+//   background-color: map-get($map: $alert, $key: info);
+// }
+
+// h1 {
+//   color: map-get($map: $alert, $key: warning);
+// }

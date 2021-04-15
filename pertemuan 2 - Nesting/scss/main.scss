@@ -1,0 +1,76 @@
+// * Nesting - Mengambil selector pada css lebih mudah
+
+// .main {
+//   h1,
+//   p {
+//     font-size: 1.5em;
+//   }
+// }
+
+// .main footer {
+//   h1,
+//   p {
+//     letter-spacing: 1px;
+//   }
+// }
+
+// * Karakter &
+// ? Untuk menunjuk parent selector yang ada di dalam selector yang sedang di style
+
+// .main {
+//   .container & {
+//     background-color: aqua;
+//   }
+
+//   .main-heading {
+//     font-size: 2em;
+//   }
+
+//   &:hover {
+//     background-color: salmon;
+//   }
+// }
+
+// ? pada karakter & dapat juga mengganti nama selector lainnya di dalam parent
+// .main {
+//   & &-heading {
+//     font-size: 2em;
+//   }
+
+//   & &-paragraph {
+//     font-size: 1.4em;
+//   }
+// }
+
+// .footer {
+//   & &-heading {
+//     font-size: 4em;
+//   }
+
+//   & &-paragraph {
+//     font-size: 3em;
+//   }
+// }
+
+// * Templating SaSS
+// ? Fitur pada sass ada juga yang namanya templating untuk pengganti karakter &
+
+.main {
+  #{&}-heading {
+    font-size: 2em;
+  }
+
+  #{&}-paragraph {
+    font-size: 1.4em;
+  }
+}
+
+.footer {
+  #{&}-heading {
+    font-size: 4em;
+  }
+
+  #{&}-paragraph {
+    font-size: 3em;
+  }
+}

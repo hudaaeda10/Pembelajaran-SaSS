@@ -1,0 +1,15 @@
+// * Modules - menyimpan bagian2 css ke halaman lain - dengan import
+// @import "modules/mixin", "modules/header", "modules/container", "modules/footer";
+
+// ! Penggunaan @import akan semakin dihilangkan dalam sass karena berbagai problem, solusinya dengan menggunakan @use
+// * @use hanya dapat digunakan pada sass dart (sass yang terinstall di dalam komputer).
+
+// ? cara penggunaannya ketika module mixin di gunakan tidak bisa secara global maka di deklarasikan ke file2 yang membutuhkan atau mengandung mixin
+// ! pendeklarasian @mixin di file2 yang membutuhkan juga harus mendeklarasikan namespace.
+
+// TODO : berikut penggunaan use - pada terminal ketika selesai di deklarasikan di main.scss tulis dibawah ini
+// TODO: sass scss/main.scss css.main.css
+
+@use "modules/header";
+@use "modules/container";
+@use "modules/footer";

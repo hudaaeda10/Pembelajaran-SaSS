@@ -1,0 +1,12 @@
+//  * Modules Footer
+@use "mixin";
+.footer ul {
+  @include mixin.inline-list();
+  li {
+    background-color: salmon;
+    padding: 0.4em;
+  }
+  a {
+    text-decoration: none;
+  }
+}

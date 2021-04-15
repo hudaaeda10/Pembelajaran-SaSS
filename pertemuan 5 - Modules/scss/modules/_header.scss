@@ -1,0 +1,14 @@
+// * Modules pada header
+// ! tambahkan @use mixin karena menggunakan mixin - dan berikan namespace
+@use "mixin";
+.header ul {
+  @include mixin.inline-list();
+  li {
+    background-color: black;
+    padding: 1em;
+  }
+
+  a {
+    color: white;
+  }
+}
